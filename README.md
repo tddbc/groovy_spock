@@ -76,5 +76,9 @@ mvn eclipse:eclipse
 mvn test
 ```
 
+## その他
+
+動作環境、IDEについては[Wiki](https://github.com/tddbc/groovy_spock/wiki)を参照してください。
+
 ## ライセンス
 Apache License, Version 2.0です (詳しくはプロジェクト直下の LICENSE-2.0.txt をご覧ください)
