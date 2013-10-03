@@ -8,15 +8,14 @@
 *.war
 *.ear
 
+### Gradle ###
+# Exclude Folder List #
+.gradle/
+build/
+
+
 ### Maven ###
 target/
-
-### IntelliJ ###
-*.iml
-*.ipr
-*.iws
-.idea/
-out/**
 
 ### Eclipse ###
 *.pydevproject
@@ -46,7 +45,11 @@ local.properties
 # PDT-specific
 .buildpath
 
-## Gradle
-.gradle/
+### IntelliJ ###
+*.iml
+*.ipr
+*.iws
+.idea/
+
 !gradle-wrapper.jar
 
