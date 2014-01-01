@@ -31,10 +31,6 @@ dependencies {
     testRuntime 'org.objenesis:objenesis:1.2'
 }
 
-task quickStart << {
-    sourceSets*.allSource*.srcDirs.flatten().each { it.mkdirs() }
-}
-
 wrapper {
-    gradleVersion = 1.8
+    gradleVersion = 1.10
 }
