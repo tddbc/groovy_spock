@@ -8,10 +8,12 @@ apply {
 group = 'tddbc'
 project.ext {
     artifactId = 'tddbc'
+    jdkVersion = '1.7'
+    groovyVersion = '2.3.2'
 }
 version = '1.0-SNAPSHOT'
 
-sourceCompatibility = targetCompatibility = 1.7
+sourceCompatibility = targetCompatibility = jdkVersion
 
 tasks.withType(AbstractCompile) each { it.options.encoding = 'UTF-8' }
 
@@ -23,7 +25,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.codehaus.groovy:groovy-all:2.1.5'
+    compile "org.codehaus.groovy:groovy-all:$groovyVersion"
 
     testCompile 'org.spockframework:spock-core:1.0-groovy-2.0-SNAPSHOT'
 
@@ -32,5 +34,23 @@ dependencies {
 }
 
 wrapper {
-    gradleVersion = 1.10
+    gradleVersion = 1.12
+}
+
+eclipse {
+    jdt {
+        sourceCompatibility = jdkVersion
+        targetCompatibility = jdkVersion
+    }
+    classpath {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}
+
+idea {
+    project {
+        jdkName = jdkVersion
+        languageLevel = jdkVersion
+    }
 }

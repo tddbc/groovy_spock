@@ -66,35 +66,6 @@ $ cd tddbc-groovy
 $ gradle init --type groovy-library
 ```
 
-## mavenを使う場合
-### インストール
-
-```bash
-# Mac
-brew install maven
-```
-
-#### Windows, Unix
-以下のURLを参考にしてインストールしてください。
-
-http://maven.apache.org/download.cgi#Installation
-
-### プロジェクトの変換
-
-```bash
-# for. IntelliJ IDEA
-mvn idea:idea
-
-# for. Eclipse
-mvn eclipse:eclipse
-```
-
-### テストの実行
-
-```bash
-mvn test
-```
-
 ## その他
 
 動作環境、IDEについては[Wiki](https://github.com/tddbc/groovy_spock/wiki)を参照してください。
