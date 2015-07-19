@@ -10,7 +10,7 @@ project.ext {
     jdkVersion = JavaVersion.VERSION_1_8
     groovyVersion = '2.3.6'
 }
-version = '1.0'
+version = '1.0-SNAPSHOT'
 
 sourceCompatibility = targetCompatibility = jdkVersion
 
