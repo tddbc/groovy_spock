@@ -10,7 +10,7 @@ project.ext {
     jdkVersion = JavaVersion.VERSION_1_8
     groovyVersion = '2.3.6'
 }
-version = '1.0-SNAPSHOT'
+version = '1.0'
 
 sourceCompatibility = targetCompatibility = jdkVersion
 
@@ -18,15 +18,12 @@ tasks.withType(AbstractCompile) each { it.options.encoding = 'UTF-8' }
 
 repositories {
     mavenCentral()
-    maven {
-        url "http://oss.sonatype.org/content/repositories/snapshots/"
-    }
 }
 
 dependencies {
     compile "org.codehaus.groovy:groovy-all:$groovyVersion"
 
-    testCompile 'org.spockframework:spock-core:1.0-groovy-2.3-SNAPSHOT'
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.3'
 
     testRuntime 'cglib:cglib-nodep:3.1'
     testRuntime 'org.objenesis:objenesis:2.1'
