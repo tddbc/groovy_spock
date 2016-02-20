@@ -1,8 +1,7 @@
 build_script:
-  - gradlew.bat --full-stacktrace clean build
+  - gradlew.bat --full-stacktrace clean check
 
-test_script:
-  - gradlew.bat --full-stacktrace check
+test: off
 
 cache:
   - .gradle
