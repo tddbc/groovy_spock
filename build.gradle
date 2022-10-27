@@ -8,7 +8,7 @@ group = 'tddbc'
 project.ext {
     artifactId = 'tddbc'
     jdkVersion = JavaVersion.VERSION_1_8
-    groovyVersion = '2.4.12'
+    groovyVersion = '4.0.6'
 }
 version = '1.0-SNAPSHOT'
 
@@ -21,18 +21,18 @@ repositories {
 }
 
 dependencies {
-    compile "org.codehaus.groovy:groovy-all:$groovyVersion"
+    implementation "org.apache.groovy:groovy-all:$groovyVersion"
 
-    testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
+    testImplementation 'org.spockframework:spock-core:2.3-groovy-4.0'
 
     // optional dependencies for using Spock
     // see https://github.com/spockframework/spock-example/blob/fbcf48f85fcfd4df468383976cdff39cd1010953/build.gradle
-    testRuntime "net.bytebuddy:byte-buddy:1.6.5" // allows mocking of classes (in addition to interfaces)
-    testRuntime "org.objenesis:objenesis:2.5.1" // allows mocking of classes without default constructor (together with CGLIB)
+    testRuntimeOnly "net.bytebuddy:byte-buddy:1.12.18" // allows mocking of classes (in addition to interfaces)
+    testRuntimeOnly "org.objenesis:objenesis:3.3" // allows mocking of classes without default constructor (together with CGLIB)
 }
 
 wrapper {
-    gradleVersion = "4.1"
+    gradleVersion = "7.5.1"
 }
 
 eclipse {
